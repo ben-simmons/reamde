@@ -11,11 +11,11 @@ First, generate a new keypair for each account you have with each service.
 $ ssh-keygen -t rsa  # append -C "user@host" if you want to use an identifier other than your machine name
 ```
 Set output file appropriately, e.g. something like ```id_rsa.github.personal``` for your personal Github account.
-It's also a good idea to set a password for each keypair, so that your SSH keys can't be used even if your machine is compromised.
+It's also a good idea to set a passphrase for each keypair, so that your SSH keys can't be used even if your machine is compromised.
 Of course, we mean "compromised" in the malicious remote access way, not in the "leaving your computer unlocked in a coffee shop" way,
 or the storied "wrench held menacingly in direct opposition to your bodily person" way.
 
-Add your private SSH keys to the keychain, so you don't have to re-enter their passwords while you use this machine.
+Add your private SSH keys to the keychain, so you don't have to re-enter their passphrases while you use this machine.
 More technically, you won't have to re-enter them for the duration of your ```ssh-agent``` session, but this duration is permanent
 unless you use the ```-t``` switch on either ```ssh-agent``` (for all identities) or ```ssh-add``` (for individual identities).
 ```
